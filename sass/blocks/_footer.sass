@@ -1,0 +1,75 @@
+footer
+    color: #fff
+    background: $footer-bg
+    padding: 56px 0 40px
+    .logo
+        border-bottom: 1px solid #fff
+        padding-bottom: 40px
+        margin-bottom: 40px
+    .menu
+        border-bottom: 1px solid #fff
+        padding-bottom: 40px
+        margin-bottom: 40px
+        .nav
+            display: flex
+            flex-flow: column wrap
+            gap: 23px
+            p
+                cursor: pointer
+                margin: 0
+                transition: .3s
+                &:hover
+                    color: $main-color
+        .lang
+            position: relative
+            #world
+                position: absolute
+                top: 50%
+                left: 16px
+                transform: translateY(-50%)
+            #language
+                width: 227px
+                background: #3B3B3B
+                font-size: 13px
+                color: #fff
+                padding: 12px 48px
+                option
+                    padding: 12px 48px
+        .social
+            margin-top: 33px
+            .links
+                img
+                    cursor: pointer
+            .hashtag
+                margin: 0 0 17px
+                font-size: 16px
+                span
+                    color: $main-color
+    .app_links
+        display: flex
+        justify-content: center
+        gap: 40px
+        border-bottom: 1px solid #fff
+        padding-bottom: 40px
+        margin-bottom: 40px
+        img
+            cursor: pointer
+    .other
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        gap: 24px 0
+        div
+            font-size: 11px
+            cursor: pointer
+        div:hover
+            text-decoration: underline
+
+@media screen and (max-width: 320px)
+    footer
+        .other
+            justify-content: start
+        .nav
+            margin-top: 23px
+        .nav-1
+            margin-top: 39px

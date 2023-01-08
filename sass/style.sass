@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap')
+
+*
+	box-sizing: border-box
+	font-family: Roboto
+
+body
+	margin: 0
+
+main
+	margin-top: 137px
+
+a
+	text-decoration: none
+
+::-webkit-scrollbar
+	width: 0
+
+@import 'base/variables'
+@import 'base/mixins'
+@import 'blocks/header'
+@import 'blocks/footer'
+@import 'blocks/search'
+@import 'blocks/shops'
+@import 'blocks/promo'
+@import 'blocks/shop'
+
+@keyframes up-down
+	0%
+		transform: translate(-50%, -50%)
+	50%
+		transform: translate(-50%, -20%)
+	100%
+		transform: translate(-50%, -50%)
+
+.scroll-up
+	width: 80px
+	height: 80px
+	background-color: $main-color
+	position: fixed
+	bottom: 24px
+	right: 16px
+	img
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		transition: .3s
+		animation: up-down .8s linear infinite
+		animation-play-state: paused
+	&:hover
+		img
+			animation-play-state: running
+
+#pushkin
+	margin-top: 80px
+
+@media screen and (max-width: 320px)
+	#pushkin
+		margin-top: 38px
+	.scroll-up
+		width: 64px
+		height: 64px
+	.hidden-mobile
+		display: none!important
+	.promo
+		background: url('../img/photo_bg-mobile.png') center center / contain no-repeat
+		.container
+			padding: 0
+			display: flex
+			justify-content: center
+		&__header
+			font-size: 24px
+			line-height: 28px
+		&__about
+			flex-flow: column wrap
+			gap: 16px
+			margin-top: 40px
+		&__text
+			margin-top: 130px
+			box-shadow: 0px 0px 16px rgba(117, 117, 117, 0.2)
+	.shop
+		&__header
+			text-align: center
+			&::after
+				content: ''
+				display: block
+				height: 1px
+				width: 50px
+				margin: 12px auto 43px
+				background: #757575
+		&__items
+			margin-bottom: 40px
+			gap: 16px 0
+		&__item
+			display: flex
+			border-radius: 2px
+			border: none
+			border-bottom: 1px solid #E3E3E3
+			img
+				border-radius: 2px
+				width: 102px
+				height: 102px
+			.item-text
+				display: flex
+				flex-flow: column wrap
+				justify-content: space-between
+				padding: 0 0 15px
+				.item-header
+					.item-title
+						font-size: 14px	
+
+@media screen and (max-width: 768px)
+	.promo
+		.container
+			padding-left: 8px
+	.shop
+		&__nav
+			.container
+				justify-content: center
